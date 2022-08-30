@@ -1,3 +1,11 @@
+// Variables
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-grey-dark: #777;
+$color-white: #fff;
+
 /* Simple CSS reset. */
 *,
 *::after,
@@ -15,23 +23,28 @@ html {
   font-size: 62.5%;
 }
 
+
 /* Always include global font styling on the body element. */
 body {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-weight:  400;
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   padding: 3rem;
 }
 
 .header {
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(85, 197, 122, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(
+    to right bottom, 
+  rgba($color-primary-light, 0.8),
+  rgba($color-primary, 0.8)),
+  url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
 }
 
 .header__logo-box {
@@ -50,10 +63,11 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+
 }
 
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
   margin-bottom: 6rem;
 }
@@ -74,6 +88,7 @@ body {
   font-weight: 700;
   letter-spacing: 1.75rem;
   animation: moveInRight 1s ease-in-out;
+
 }
 
 @keyframes moveInLeft {
@@ -81,37 +96,45 @@ body {
     opacity: 0;
     transform: translateX(-10rem);
   }
+
   75% {
-    transform: translateX(1rem);
+    transform: translateX(1rem)
   }
+
   100% {
     opacity: 1;
-    transform: translate(0);
+    transform: translate(0)
   }
 }
+
 @keyframes moveInRight {
   0% {
     opacity: 0;
     transform: translateX(10rem);
   }
+
   75% {
-    transform: translateX(-1rem);
+    transform: translateX(-1rem)
   }
+
   100% {
     opacity: 1;
-    transform: translate(0);
+    transform: translate(0)
   }
 }
+
 @keyframes moveInBottom {
   0% {
     opacity: 0;
     transform: translateY(3rem);
   }
+
   100% {
     opacity: 1;
-    transform: translate(0);
+    transform: translate(0)
   }
 }
+
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -120,23 +143,23 @@ body {
   text-decoration: none;
   padding: 1.5rem 4rem;
   border-radius: 10rem;
-  transition: all 0.2s;
+  transition: all .2s;
   font-size: 1.6rem;
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
 }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
 }
 
 .btn--white {
-  background-color: #fff;
-  color: #777;
+  background-color: $color-white;
+  color: $color-grey-dark;
 }
 
 .btn::after {
@@ -149,11 +172,11 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all 0.4s;
+  transition: all .4s;
 }
 
 .btn--white::after {
-  background-color: #fff;
+  background-color: $color-white;
 }
 
 .btn:hover::after {
@@ -162,8 +185,7 @@ body {
 }
 
 .btn--animated {
-  animation: moveInBottom 0.5s ease-in-out 0.75s;
+  animation: moveInBottom .5s ease-in-out .75s;
   animation-fill-mode: backwards;
 }
 
-/*# sourceMappingURL=style.css.map */
