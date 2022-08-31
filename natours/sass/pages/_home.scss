@@ -1,11 +1,13 @@
 @use '../abstracts/variables';
 
+// ABOUT section
 .section-about {
   background-color: variables.$color-grey-light-1;
   padding: 25rem 0;
   margin-top: -20vh;
 }
 
+// FEATURES section
 .section-features {
   padding: 20rem 0;
   background-image: linear-gradient(
@@ -21,4 +23,11 @@
   & > * {
     transform: skewY(7deg);
   }
+}
+
+// TOURS section
+.section-tours {
+  background-color: variables.$color-grey-light-1;
+  padding: 25rem 0 15rem 0;
+  margin-top: -10rem;
 }
