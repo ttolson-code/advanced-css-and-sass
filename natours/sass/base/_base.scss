@@ -1,0 +1,21 @@
+// Simple CSS reset.
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// Root font size is set on the html element.
+// Set to 10px so that 1rem = 10px, an easy conversion.
+// Set 10px as a percentage to retain the ability to adjust font size via the browser.
+// 10/16 = 62.5%
+// Defines what 1 rem is.
+html {
+  font-size: 62.5%;
+}
+  
+body {
+  box-sizing: border-box;
+}
