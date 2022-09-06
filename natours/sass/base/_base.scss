@@ -1,3 +1,4 @@
+@use '../abstracts/variables';
 @use '../abstracts/mixins';
 
 // Simple CSS reset.
@@ -37,4 +38,9 @@ body {
   @include mixins.respond(tab-port) {
     padding: 0rem;
   }
+}
+
+::selection {
+  background-color: variables.$color-primary;
+  color: variables.$color-white;
 }
