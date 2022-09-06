@@ -171,7 +171,15 @@
     font-weight: 100;
   }
 
-  @include mixins.respond(tab-port) {
+  /* 
+    Below code does not use the 'respond' mixin in order to allow
+    for multiple media queries. Specifically the card component needs to render
+    without hover animations on ALL devices that do not support hover. 
+  */
+
+  // @include mixins.respond(tab-port) {
+  @media only screen and (max-width: 56.25em),
+  only screen and (hover: none) {
     height: auto;
     background-color: variables.$color-white;
     border-radius: 3px;
@@ -203,7 +211,7 @@
       left: 0;
       transform: translate(0);
       width: 100%;
-      padding: 7rem 4rem 4rem 4rem;
+      padding: 5rem 4rem 4rem 4rem;
     }
   
     &__price-box {
@@ -212,6 +220,7 @@
 
     &__price-value {
       font-size: 4rem;
+      font-weight: 700;
     }
   }
 }

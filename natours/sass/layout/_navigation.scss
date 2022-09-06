@@ -63,9 +63,9 @@
     top: 0;
     right: 0;
     z-index: 1500;
-    opacity: 0;
+    // opacity: 0;
+    visibility: hidden;
     transition: all .5s cubic-bezier(.67, -0.5, .06, 1.4);
-
   }
 
   &__list {
@@ -81,7 +81,6 @@
 
   &__item {
     margin: 1rem;
-
   }
 
   &__link {
@@ -116,15 +115,15 @@
       transform: translateX(1rem)
     }
   }
-  
 
   // FUNCTIONALITY
   &__checkbox:checked ~ &__background {
     transform: scale(80);
   }
 
-   &__checkbox:checked ~ &__nav {
-    opacity: 1;
+  &__checkbox:checked ~ &__nav {
+    // opacity: 1;
+    visibility: visible;
     width: 100%;
   }
 
