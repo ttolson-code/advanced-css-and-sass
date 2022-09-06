@@ -12,7 +12,8 @@
     "concat-css": "concat -o dist/css/style.concat.css dist/css/icon-font.css dist/css/style.comp.css",
     "prefix-css": "postcss dist/css/style.concat.css --use autoprefixer -o dist/css/style.prefix.css",
     "compress-css": "sass --style=compressed --no-source-map dist/css/style.prefix.css dist/css/style.css",
-    "build": "npm-run-all compile-sass concat-css prefix-css compress-css"
+    "cleanup-css": "del-cli dist/css/style.comp.css dist/css/style.concat.css dist/css/style.prefix.css",
+    "build": "npm-run-all compile-sass concat-css prefix-css compress-css cleanup-css"
   },
   "author": "",
   "license": "ISC",
