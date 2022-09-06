@@ -26,7 +26,7 @@
     rgba(variables.$color-primary, .8)),
     url(../img/nat-4.jpg);
   background-size: color;
-  margin-top: -10rem;
+  margin-top: -12rem;
   transform: skewY(-7deg);
 
   // Select all direct child elements.
@@ -58,6 +58,19 @@
 .section-stories {
   position: relative;
   padding: 15rem 0;
+
+  background-image: linear-gradient(rgba(variables.$color-grey-light-2, .8), rgba(variables.$color-grey-light-2, .8)), url(../img/nat-11-small.jpg);
+  background-size: cover;
+  background-position: top;
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 112.5em) {
+      background-image: linear-gradient(
+        rgba(variables.$color-grey-light-2, .8),
+        rgba(variables.$color-grey-light-2, .8)),
+        url(../img/nat-11-large.jpg);
+  }
 
   @include mixins.respond(tab-port) {
     padding: 10rem 0;
