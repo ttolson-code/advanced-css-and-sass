@@ -76,17 +76,16 @@
   &:link,
   &:visited {
     display: inline-block;
-    color: variables.$color-primary;
+    color: variables.$color-white;
+    background-color: variables.$color-primary;
     font-size: variables.$default-font-size;
     text-decoration: none;
     border-bottom: 1px solid variables.$color-primary;
-    padding: .5rem;
+    padding: 1rem 2rem;
     transition: all .2s;
   }
 
   &:hover {
-    background-color: variables.$color-primary;
-    color: variables.$color-white;
     box-shadow: 0 1rem 2rem rgba(variables.$color-black, .2);
     transform: translateY(-2px);
   }
