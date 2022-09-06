@@ -17,8 +17,9 @@
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, .15);
     transition: all .9s ease;
-    backface-visibility: hidden;
     overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 
     &--front {
       background-color: variables.$color-white;
