@@ -1,13 +1,23 @@
 @use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 .footer {
   background-color: variables.$color-grey-dark-3;
   color: variables.$color-grey-light-1;
-  padding: 10rem 0;
+  padding: 10rem 5rem;
   font-size: 1.4rem;
+
+  @include mixins.respond(tab-port) {
+    padding: 8rem 0;
+  }
 
   &__logo-box {
     text-align: center;
+    margin-bottom: 8rem;
+
+    @include mixins.respond(tab-port) {
+      margin-bottom: 6rem;
+    }
   }
 
   &__logo {
@@ -19,7 +29,11 @@
     display: inline-block;
     border-top: 1px solid variables.$color-grey-dark-1;
     padding-top: 2rem;
-      
+
+    @include mixins.respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -58,5 +72,11 @@
     width: 80%;
     border-top: 1px solid variables.$color-grey-dark-1;
     padding-top: 2rem;
+
+    @include mixins.respond(tab-port) {
+     width: 100%;
+     float: none;
+     text-align: center;
+    }
   }
 }
