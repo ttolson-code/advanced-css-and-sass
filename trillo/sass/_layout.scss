@@ -1,0 +1,105 @@
+@use 'base';
+
+// DEMO CONTAINER
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-dark);
+  min-height: 50rem;
+
+  @media only screen and (max-width: base.$bp-largest) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+// HEADER
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7rem;
+  font-size: 1.4rem;
+  background-color: #fff;
+  border-bottom: var(--line);
+
+  @media only screen and (max-width: base.$bp-smallest) {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 11rem;
+  }
+}
+
+// MAIN CONTENT
+.content {
+  display: flex;
+
+  @media only screen and (max-width: base.$bp-medium) {
+    flex-direction: column;
+  }
+  
+  // SIDEBAR
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 18%;
+    background-color: var(--color-grey-dark-1);
+  }
+  
+  // HOTEL VIEW
+  .hotel-view {
+    flex: 1;
+    background-color: #fff;
+    
+    // HOTEL CONTENT
+    .detail {
+      display: flex;
+      background-color: var(--color-grey-light-1);
+      font-size: 1.4rem;
+      padding: 4.5rem;
+      border-bottom: var(--line);
+
+      @media only screen and (max-width: base.$bp-medium) {
+        padding: 3rem;
+      }
+
+      @media only screen and (max-width: base.$bp-small) {
+        flex-direction: column;
+      }
+      
+      // HOTEL DESCRIPTION
+      .description {
+        flex: 0 0 60%;
+        background-color: #fff;
+        box-shadow: var(--shadow-light);
+        padding: 3rem;
+        margin-right: 4.5rem;
+
+        @media only screen and (max-width: base.$bp-medium) {
+          padding: 2rem;
+          margin-right: 3rem;
+        }
+  
+        @media only screen and (max-width: base.$bp-small) {
+          margin-right: 0;
+          margin-bottom: 3rem;
+        }
+      }
+      
+      // USER REVIEWS
+      .user-reviews {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+      }
+    }
+  }
+}
+
+
+
+
