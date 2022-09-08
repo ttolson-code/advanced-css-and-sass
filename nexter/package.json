@@ -1,0 +1,29 @@
+{
+  "name": "Nexter",
+  "version": "1.0.0",
+  "description": "",
+  "browserslist": "last 10 versions",
+  "main": "index.js",
+  "scripts": {
+    "watch-sass": "sass sass/main.scss dist/css/style.css -w --no-source-map",
+    "dev-server": "live-server --open=dist",
+    "dev-start": "npm-run-all --parallel dev-server watch-sass",
+    "compile-sass": "sass sass/main.scss dist/css/style.comp.css --no-source-map",
+    "prefix-css": "postcss dist/css/style.comp.css --use autoprefixer -o dist/css/style.prefix.css",
+    "compress-css": "sass --style=compressed --no-source-map dist/css/style.prefix.css dist/css/style.css",
+    "cleanup-css": "del-cli dist/css/style.comp.css dist/css/style.concat.css dist/css/style.prefix.css",
+    "build": "npm-run-all compile-sass prefix-css compress-css cleanup-css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "concat": "^1.0.3",
+    "del-cli": "^5.0.0",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0",
+    "sass": "^1.54.6"
+  }
+}
