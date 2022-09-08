@@ -37,17 +37,16 @@
     grid-column: 1 / -1;
     justify-self: center;
     align-self: end;
-    z-index: 3;
-
     width: 80%;
-    font-family: base.$font-display;
-    font-size: 1.6rem;
-    text-align: center;
-    padding: 1.25rem;
     background-color: base.$color-secondary;
     color: #fff;
+    font-family: base.$font-display;
+    font-size: 1.6rem;
     font-weight: 400;
+    text-align: center;
+    padding: 1.25rem;
     transform: translateY(50%);
+    z-index: 3;
   }
 
   &__location,
